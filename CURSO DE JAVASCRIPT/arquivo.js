@@ -1,12 +1,14 @@
-function somando(valor1, valor2) {
-    return valor1 + valor2;
+
+function alertHello() {
+    alert("Ola, Mundo");
 }
 
-function realParaDolar (real, dolar){
-    return real * dolar;
+//OUTRAS FUNÇÕES
+
+function paraCelsius(valorFahrenheit){
+    return(5/9) * (valorFahrenheit - 32);
 }
 
-var total = realParaDolar(5.00, 5.13);
+var x = paraCelsius(77); 
 
-alert("o valor atual do dolar e de R$" + total);
-
+alert("A temperatura e de " +x+ " graus celsius");
