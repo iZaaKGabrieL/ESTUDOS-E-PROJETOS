@@ -6,7 +6,14 @@
     <script src="arquivo.js"></script>
     <title>EVENTOS</title>
 </head>
-<body>
+<body  id="corpo" onresize="mudarcor()">
     
+    <h1>SE LIGA NISSO</h1>
+    <button ondblclick="supresa()">clica aqui</button>
+    <br><br><br>
+    <p id="texto"></p>
+    <div id="teste" " onmouseover="viraverde()" onmouseout="voltaazul()"  style="width: 80; height: 200px; background: blue; margin: auto;"></div>
+    <br>
+    <input id="campo" onfocus="brilhar()" style=" padding: 80px; font-size: 40px; " type="text" placeholder="digita alguma coisa ai">
 </body>
 </html>
