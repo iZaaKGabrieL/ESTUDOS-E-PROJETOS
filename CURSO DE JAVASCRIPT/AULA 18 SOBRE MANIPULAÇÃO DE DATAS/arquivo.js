@@ -59,6 +59,11 @@ console.log(segundos);
 let mili = data.getMilliseconds();
 console.log(mili);
 
+//PEGAR A DATA NO FORMATO BRASILEIRO
+
+let databr = data.toLocaleString("pt-BR");
+console.log(databr);
+
 
 
 
