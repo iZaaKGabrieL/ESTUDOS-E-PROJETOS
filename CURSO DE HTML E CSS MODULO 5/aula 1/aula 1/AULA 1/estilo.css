@@ -4,7 +4,7 @@ div.pai{
 
     background-color: aquamarine;
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     
     
 
@@ -14,5 +14,4 @@ div.filho{
     background-color: rgb(30, 151, 231);
     margin: 3px;
     flex: auto;
-    text-align: center;
 }

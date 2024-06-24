@@ -64,6 +64,44 @@ console.log(mili);
 let databr = data.toLocaleString("pt-BR");
 console.log(databr);
 
+// PARA PEGAR OS VALORES SEPARADOS
+
+d = new Date();
+
+diaMes = d.getDate();
+
+mes = d.getMonth() + 1;
+
+ano = d.getFullYear();
+
+
+let datCompleta = diaMes + "/" + mes + "/" + ano;
+
+console.log(datCompleta);
+
+// AGORA COMO COMPARAR DATAS
+
+var hoje = new Date();
+
+var vencimento =  new Date(2016, 0, 25);
+
+if(hoje > vencimento){
+    console.log("Sua conta esta vencida.");
+
+}else{
+    console.log("AINDA NÃO VENCEU E NÃO SERAR PAGO TAXA.");
+}
+
+// DIFERENÇA  ENTRE  DUAS DATAS EM DIAS 
+
+var dataInicial = new Date();
+
+var  dataFinal = new Date(2025, 5,  24);
+
+var diferencaTempo = dataFinal.getTime() - dataInicial.getTime();
+
+var diferencaDias = Math.ceil(diferencaTempo /  (24 * 60 * 60 * 1000));
+console.log(diferencaDias);
 
 
 
