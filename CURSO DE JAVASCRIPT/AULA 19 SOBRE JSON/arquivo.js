@@ -5,3 +5,13 @@
 JSON.parse() ->  converte texto no padrão JSON para objetos.
 JSON.stringify() -> converte objetos  em texto padrão JSON . */
 
+const carro = {
+    marca: "Fiat",
+    ano: 2023,
+    modelo: "ARGO",
+
+
+};
+
+let texto = JSON.stringify(carro);
+document.getElementById('area').innerHTML = texto;
