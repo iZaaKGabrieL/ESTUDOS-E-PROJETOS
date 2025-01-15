@@ -8,27 +8,40 @@
 <body>
     <h1>formularios</h1>
     <form action="cadastro.php" method="get">
-        <label for="aiemail">email:</label>
-        <input type="email" name="imail" id="mail" autocomplete="email">
-        <!--estudar sobre RegEx-->
-        <label for="tel">telefone</label>
-        <input type="tel" name="itel" id="telef" autocomplete="tel " pattern="^\(\d{2}\)\d{4}-\d{4}$" required>
-        <button type="submit">enviar</button>
-        <button type="reset">Limpar</button>
-        <fieldset>
-            <legend>Escolha de sexo</legend>
-            <input type="radio" name="sexo" id="isxmas"><label for="masculino">homem(MASCULINO)</label>
-            <input type="radio" name="sexo" id="sxfem"><label for="MULHER(FEMININA)">MULHER(FEMININA)</label>
-        </fieldset>
-           
+        <label for="n1">numero 1:</label>
+    <input type="number" name="num" id="inum" min="0" max="50" required oninput="isoma.innerHTML = Number(inum.value) + Number(inum2.value)">
+    <label for="n2">numero 2:</label>
+    <input type="number" name="num2" id="inum2" min="0" max="50" required oninput="isoma.innerHTML = Number(inum.value) + Number(inum2.value)">
+    <p>
+        <label for="range">valor:</label>
+        <input type="range" name="val" id="valor" min="0" max="200" value="10" required oninput="ival.innerHTML = Number(valor.value)">
+        <output id="ival"> 
+            5
+        </output>
 
-        <fieldset>
-            <legend>ESPORTES DISPONIVEIS</legend>
-            <input type="checkbox" name="fut" id="soccer">FUTEBOL
-            <input type="checkbox" name="basq" id="ket">Basquete
-            <input type="checkbox" name="itenis" id="estenis">Tenis
-            <input type="checkbox" name="ivolei" id="volei">Volei
-        </fieldset>
+    </p>
+
+    <p>
+        <label for="ano">nascimento</label>
+        <input type="number" name="nas" id="inas" min="1960" max="2025" oninput="calcIdade()">
+        <label for="iidade">sua idade:</label>
+        <output id="iidade">
+
+        </output>
+    </p>
+
+        <button type="submit">enviar</button>
+        <input type="reset" value="limpar">
+        <label for="isoma">soma</label>
+        <output id="isoma">
+
+        </output>
     </form>
+    <script>
+        function calcIdade(){
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(inas.value)
+        }
+    </script>
 </body>
 </html>
