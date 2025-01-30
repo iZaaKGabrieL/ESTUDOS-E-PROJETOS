@@ -2,42 +2,48 @@
 
 /* VERSÃO MOBILE FIRST */
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.3em;
-    box-sizing: border-box;
+
+@media screen and (min-width:600px) and (max-width:768px){
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1.3em;
+        box-sizing: border-box;
+    }
+    
+    html{
+        height: 100vh;
+    }
+    
+    body{
+        background: black url(back-phone.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    h1{
+        text-align: center;
+    }
+    
+    main{
+        background-color: rgba(255, 255, 255, 0.678);
+        width: 90vw;
+        margin: auto;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    img{
+        display: block;
+        margin: auto;
+    }
+    
+    img#celular {display: block;}
+    img#tv{display: none;}
+    img#tablet{display: none;}
+    img#pc{display: none;}
 }
 
-html{
-    height: 100vh;
-}
-
-body{
-    background: black url(back-phone.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-h1{
-    text-align: center;
-}
-
-main{
-    background-color: rgba(255, 255, 255, 0.678);
-    width: 90vw;
-    margin: auto;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-img{
-    display: block;
-    margin: auto;
-}
-
-img#celular {display: block;}
-img#tv{display: none;}
-img#tablet{display: none;}
-img#pc{display: none;}
