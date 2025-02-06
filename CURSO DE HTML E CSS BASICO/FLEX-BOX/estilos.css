@@ -5,11 +5,16 @@
 .conteiner{
     display: flex;
     background-color: brown;
+    flex-flow: row nowrap; /* <-- para simplificar */
 
 }
 
 .item{
-    flex: auto;
-    background-color: rgb(156, 117, 89);
+    
+    background-color: rgb(255, 106, 0);
     text-align: center;
+    padding: 1px;
+    color: aliceblue;
+    border: 1px solid black;
+
 }
