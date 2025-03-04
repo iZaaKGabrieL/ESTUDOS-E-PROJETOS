@@ -5,7 +5,9 @@
 .conteiner{
     display: flex;
     background-color: brown;
-    flex-flow: row nowrap; /* <-- para simplificar */
+    flex-flow: row wrap; /* <-- para simplificar */
+    height: 400px;
+    justify-content: center;
 
 }
 
@@ -13,7 +15,8 @@
     
     background-color: rgb(255, 106, 0);
     text-align: center;
-    padding: 1px;
+    padding:10px;
+    align-content: center;
     color: aliceblue;
     border: 1px solid black;
 
