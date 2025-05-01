@@ -36,4 +36,4 @@ console.log(nums.join(" "));
 
 //reverse --> Inverte Arrays
 
-console.log(nums.reverse());
+console.log(nums.reverse()); 
