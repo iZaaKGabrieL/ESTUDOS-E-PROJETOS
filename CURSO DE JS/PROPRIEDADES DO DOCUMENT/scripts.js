@@ -1,0 +1,13 @@
+//PARA TER ACESSO A TODOS OS ELEMENTOS DA PAGINA HTML 
+
+console.log(document.body);
+
+
+//PODEMOS TER ACESSO A TODOS O LINKS DA PAGINA ATRAVES DO:
+
+console.log(document.links);
+
+
+//PODEMOS TAMBEM RECEBER O URL DE UMA PAGINA ATRAVES DO:
+
+console.log(document.URL);
