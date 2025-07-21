@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL_LIBRARY</title>
+</head>
+<body>
+    <div class="library">
+        <div class="estanteDeLivro">
+
+        </div>
+
+
+<form action="">
+    <input type="text" placeholder="TITULO DO LIVRO: " id="titulo" required>
+    <input type="text" placeholder="AUTOR DO LIVRO: " id="autor" required>
+    <input type="text" placeholder="GENERO DO LIVRO: " id="genero" required>
+    <input type="number" placeholder="QUANTAS PAGINAS O LIVRO TEM: " id="paginas" required> 
+    <p>voce ja leu: <input type="checkbox" name="leu" id="status"></p>
+
+</form>
+
+        <button class="adicionarLivro" onclick="addBookLibrary()">
+            ADICIONAR LIVRO
+        </button>
+        <button class="remover">REMOVER LIVRO</button>
+    </div>
+</body>
+<script src="scripts.js"></script>
+</html>
