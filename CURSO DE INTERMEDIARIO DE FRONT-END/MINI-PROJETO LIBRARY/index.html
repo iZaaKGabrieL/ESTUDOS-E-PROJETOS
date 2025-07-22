@@ -6,12 +6,10 @@
     <title>DIGITAL_LIBRARY</title>
 </head>
 <body>
-    <div class="library">
-        <div class="estanteDeLivro">
+    
 
-        </div>
-
-
+    <div class="library">        
+  
 <form action="">
     <input type="text" placeholder="TITULO DO LIVRO: " id="titulo" required>
     <input type="text" placeholder="AUTOR DO LIVRO: " id="autor" required>
@@ -20,12 +18,15 @@
     <p>voce ja leu: <input type="checkbox" name="leu" id="status"></p>
 
 </form>
-
+<div class="estanteDeLivro">
+        </div>
         <button class="adicionarLivro" onclick="addBookLibrary()">
             ADICIONAR LIVRO
         </button>
+        <br><br>
         <button class="remover">REMOVER LIVRO</button>
     </div>
+   
 </body>
 <script src="scripts.js"></script>
 </html>
