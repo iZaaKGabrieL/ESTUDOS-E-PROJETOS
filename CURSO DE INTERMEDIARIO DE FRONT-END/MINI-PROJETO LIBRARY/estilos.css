@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+
+.library{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: antiquewhite;
+    width: 1280px;
+    height: 720px;
+}
+
+.estanteDeLivro{
+
+display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+
+}
+
+
+.livro {
+
+background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+form{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+form > input{
+    border: none;
+    width: 400px;
+    height: 80px;
+    font-size: 1.3rem;
+    text-align: center;
+
+}
+
+form > input:focus{
+    outline: none;
+    border: none;
+    width: 400px;
+    font-size: 1.3rem;
+    height: 80px;
+    text-align: center;
+
+}
+
+button{
+
+    border: none;
+    width: 200px;
+    height: 60px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: medium;
+}
