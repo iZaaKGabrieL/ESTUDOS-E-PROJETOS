@@ -14,3 +14,4 @@ const jogador2 = new Player('Jarvis', 'X');
 
 jogador.sayname();
 jogador2.sayname();
+
