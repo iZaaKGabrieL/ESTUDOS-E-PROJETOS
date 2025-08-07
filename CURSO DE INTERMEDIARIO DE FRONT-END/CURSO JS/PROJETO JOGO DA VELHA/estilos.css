@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 36, 36);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+div#tabuleiro{
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    width: 700px;
+    height: 600px;
+    border-radius: 8px;
+    background-color: blanchedalmond;
+
+}
+
+.quadros{
+    width: 200px;
+    height: 180px;
+    gap: 10px;
+    border: 2px solid black;
+}
+
+.celulas{
+   width: 200px;
+    height: 180px;
+    gap: 10px;
+    border: 2px solid rgb(7, 192, 22);
+    text-align: center;
+    font-size: 4.2rem;
+}
+
+button{
+    width: 200px;
+    height: 60px;
+    border: none;
+    color: aliceblue;
+    border-radius: 10px;
+    background-color: rgb(221, 147, 37);
+
+}
+
+p{
+    color: aliceblue;
+}

@@ -1,14 +1,34 @@
 
 //PEGANDO ELEMENTOS HTML:
 
-const tabuleiro = document.getElementsByClassName("tabuleiro");
+const tabuleiro = document.getElementById("tabuleiro");
+
+let pontosX = 0;
+let pontosO = 0;
 
 
-//CRIAÇÃO DO IIFE:
+function CriaTabuleiro(){
 
+    const estadoTabuleiro = JogoDaVelha.getBoard();
+    tabuleiro.innerHTML = "";
 
+    estadoTabuleiro.forEach((valor, index) => {
+        const celulas = document.createElement("div");
+        celulas.classList.add("celulas");
+        celulas.textContent = valor;
 
+        celulas.addEventListener("click", () => {
+             jogadores.jogar(index);
+             CriaTabuleiro();
+        })
+        tabuleiro.appendChild(celulas);
+    })
+    
+    };
 
+    
+
+    //CRIAÇÃO DO IIFE:
 const JogoDaVelha = (function(){
     let GameBoard = ["", "", "", "", "", "", "", "", ""];
 
@@ -40,29 +60,41 @@ function createPlayer(name, marker){
 //CRIAÇÃO DOS JOGADORES:
 
     const jogadores = (function(){
-        const Player1 = createPlayer("Isaac", "X");
-        const Player2 = createPlayer("Outro", "O");
+        const Player1 = createPlayer("You", "X");
+        const Player2 = createPlayer("Other", "O");
         let correntPlayer = Player1;
         let gameOver = false;
   
          const jogar = (index) => {
-
-            JogoDaVelha.updateBoard(index, correntPlayer.marker);
+            if(gameOver) return;
+            if(!JogoDaVelha.updateBoard(index, correntPlayer.marker)) return;
             if(checarVitoria()){
                 gameOver = true;
                 console.log(`${correntPlayer.name}, venceu!`);
+                
+           if(correntPlayer.marker === "X"){
+                pontosX++;
+                document.getElementById("placar-x").textContent = `player 1: ${pontosX}`;
+            }else{
+                pontosO++;
+                document.getElementById("placar-o").textContent = `player 2: ${pontosO}`;
+            }
+
             } else if(checaEmpate()){
                 gameOver = true;
                 console.log("Empatou!");
             }else{
                 alternarTurno();
             };
-            
+
+
+            return;
         }
 
         const checarVitoria = () => {
         const b = JogoDaVelha.getBoard();
-        const linhas = [
+
+             const linhas = [
       [0,1,2], [3,4,5], [6,7,8], // linhas
       [0,3,6], [1,4,7], [2,5,8], // colunas
       [0,4,8], [2,4,6]           // diagonais
@@ -71,7 +103,10 @@ function createPlayer(name, marker){
     return linhas.some(([a, b1, c]) =>
       b[a] && b[a] === b[b1] && b[a] === b[c]
     );
+
   };
+
+  
 
   const checaEmpate = () => {
     return JogoDaVelha.getBoard().every(c => c !== "");
@@ -81,31 +116,30 @@ function createPlayer(name, marker){
     correntPlayer = correntPlayer === Player1 ? Player2 : Player1;
   };
 
-  return { jogar };
-        
-function CriaTabuleiro(){
+ 
+ const resetaJogo = () =>{
+ gameOver = false;
+ correntPlayer = Player1;
+} 
 
-    const JogoDaVelha = JogoDaVelha.getBoard();
-    tabuleiro.innerHTML = "";
-
-    GameBoard.forEach((valor, index) => {
-        const celulas = document.getElementsByClassName("celula");
-        celulas.classList.add("celulas");
-        celulas.textContent = valor;
-
-        celulas.addEventListener("click", (e) => {
-             jogadores.jogar(index);
-             CriaTabuleiro();
-        })
-    })
-    
-    
-    
-    };
-   
+ return { jogar, resetaJogo }; 
 
 })();
 
+
+
+  function resetaJogo(){
+       
+        const btt = document.getElementById("resetar");
+        btt.addEventListener("click", () => {
+            JogoDaVelha.resetBoard();
+            CriaTabuleiro();
+            jogadores.resetaJogo();
+        });
+        
+    };
+
+resetaJogo();
 
 
 
