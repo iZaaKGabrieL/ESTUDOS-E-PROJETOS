@@ -140,6 +140,6 @@ function createPlayer(name, marker){
     };
 
 resetaJogo();
-
+ CriaTabuleiro();
 
 
