@@ -1,9 +1,8 @@
-// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production", // usa "production" depois, se quiser otimizar
   entry: "./src/index.js",
   output: {
     filename: "main.js",
@@ -15,4 +14,19 @@ module.exports = {
       template: "./src/template.html",
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: { esModule: false },
+          },
+        ],
+      },
+    ],
+  },
 };
+
