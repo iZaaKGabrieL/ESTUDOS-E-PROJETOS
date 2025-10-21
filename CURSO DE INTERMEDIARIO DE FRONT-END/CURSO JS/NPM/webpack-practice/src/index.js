@@ -1,2 +1,2 @@
 import './styles.css';
-console.log("testando webpack");
+console.log('Webpack is working!'); 
