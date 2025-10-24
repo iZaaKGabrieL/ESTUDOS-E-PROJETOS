@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'C:\Users\Isaac Gabriel\Documents\ESTUDOS-E-PROJETOS-2\ESTUDOS-E-PROJETOS\CURSO DE INTERMEDIARIO DE FRONT-END\CURSO JS\NPM\webpack-practice\src\template.html',
+      template:'src/template.html',
       filename: 'index.html',
     }),
   ],
